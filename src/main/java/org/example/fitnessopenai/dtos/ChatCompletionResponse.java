@@ -1,4 +1,4 @@
-package org.example.fitnessopenai.service.dtos;
+package org.example.fitnessopenai.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

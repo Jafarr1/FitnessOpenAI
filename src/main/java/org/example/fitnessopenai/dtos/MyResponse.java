@@ -1,4 +1,4 @@
-package org.example.fitnessopenai.service.dtos;
+package org.example.fitnessopenai.dtos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;

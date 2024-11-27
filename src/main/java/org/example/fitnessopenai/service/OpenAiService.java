@@ -1,9 +1,9 @@
 package org.example.fitnessopenai.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.fitnessopenai.service.dtos.ChatCompletionRequest;
-import org.example.fitnessopenai.service.dtos.ChatCompletionResponse;
-import org.example.fitnessopenai.service.dtos.MyResponse;
+import org.example.fitnessopenai.dtos.ChatCompletionRequest;
+import org.example.fitnessopenai.dtos.ChatCompletionResponse;
+import org.example.fitnessopenai.dtos.MyResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,7 +1,7 @@
 package org.example.fitnessopenai.api;
 
 import org.example.fitnessopenai.service.OpenAiService;
-import org.example.fitnessopenai.service.dtos.MyResponse;
+import org.example.fitnessopenai.dtos.MyResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
