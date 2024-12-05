@@ -6,6 +6,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.http.MediaType.APPLICATION_JSON;
+
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.containsString;
@@ -31,9 +36,10 @@ class FitnessControllerTest {
 
         when(openAiService.getFitnessAdvice(userInput)).thenReturn(mockResponse);
 
-        mockMvc.perform(get("/fitness/advice").param("userInput", userInput))
-                .andExpect(status().isOk());
-               // .andExpect(content().string(containsString("Focus on compound exercises and a balanced diet.")));
+        mockMvc.perform(post("/fitness/advice")
+                        .contentType(APPLICATION_JSON)
+                        .content("{\"userInput\": \"I want to get stronger\"}")) // JSON body
+                .andExpect(status().isOk()) // Expect 200 OK
+                .andExpect(jsonPath("$.answer").value("Focus on compound exercises and a balanced diet.")); // Check response
     }
-
 }
