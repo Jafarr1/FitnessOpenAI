@@ -14,8 +14,8 @@ public class CorsConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://ashy-moss-01592bf10.5.azurestaticapps.net, https://fitnessaibackend-h6dwepg7guefdqa2.northeurope-01.azurewebsites.net")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE")
+                        .allowedOrigins("https://ashy-moss-01592bf10.5.azurestaticapps.net")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
