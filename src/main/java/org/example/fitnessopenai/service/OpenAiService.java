@@ -44,7 +44,7 @@ public class OpenAiService {
     public OpenAiService(WebClient client) {
         this.client = client;
     }
-
+// testing
     public MyResponse makeRequest(String userPrompt, String _systemMessage) {
 
         ChatCompletionRequest requestDto = new ChatCompletionRequest();
