@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "https://ashy-moss-01592bf10.5.azurestaticapps.net")
+@CrossOrigin(origins = "*")
 @RestController
 public class FitnessController {
 
